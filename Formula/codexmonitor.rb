@@ -10,9 +10,7 @@ class Codexmonitor < Formula
   def install
     # SwiftPM plugins + Homebrew sandboxing can conflict on some systems.
     # Disable SwiftPM sandbox to ensure the manifest and build steps can run.
-    ENV["SWIFTPM_DISABLE_SANDBOX"] = "1"
-
-    system "swift", "build", "-c", "release"
+    system "swift", "build", "-c", "release", "--disable-sandbox"
     bin.install ".build/release/CodexMonitor-CLI" => "codexmonitor"
   end
 
