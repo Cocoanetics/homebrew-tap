@@ -1,8 +1,8 @@
 class Post < Formula
   desc "Local mail daemon, MCP server, and CLI — built in Swift"
   homepage "https://github.com/Cocoanetics/Post"
-  url "https://github.com/Cocoanetics/Post/archive/refs/tags/v1.0.2.tar.gz"
-  sha256 "5c354dfaec4431a4a60717d023ad752585cd3171dbb8cfc1fcc1640935aefd60"
+  url "https://github.com/Cocoanetics/Post/archive/refs/tags/v1.2.0.tar.gz"
+  sha256 "06c65e282ab607f26cb7cbe872a6d9234d5be8917a7b316546f55ca44bed066c"
   license "MIT"
 
   depends_on xcode: ["16.0", :build]
@@ -17,18 +17,13 @@ class Post < Formula
 
   def caveats
     <<~EOS
-      Post requires configuration before use:
+      Post requires server credentials before use:
 
-      1. Add server credentials to keychain:
          post keychain add <server-id> --host <host> --port 993
-
-      2. Create config file:
-         echo '{ "servers": { "<server-id>": {} } }' > ~/.post.json
-
-      3. Start the daemon:
          postd start
 
-      See https://github.com/Cocoanetics/Post for full documentation.
+      No config file needed — servers are auto-discovered from the keychain.
+      For advanced settings, create ~/.post.json (see GitHub for details).
     EOS
   end
 
