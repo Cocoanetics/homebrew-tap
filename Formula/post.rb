@@ -1,13 +1,17 @@
 class Post < Formula
   desc "Local mail daemon, MCP server, and CLI — built in Swift"
   homepage "https://github.com/Cocoanetics/Post"
-  url "https://github.com/Cocoanetics/Post/archive/refs/tags/v1.3.1.tar.gz"
-  sha256 "d40a9271939e0a8db1666d839d74301dcea534e999b70b4e06d8110d74834c67"
+  url "https://github.com/Cocoanetics/Post/archive/refs/tags/v1.3.2.tar.gz"
+  sha256 "5619ea79d6dfa85631cab39d71d57668b03d7a8ca2803911c6055d3895e0509a"
   license "MIT"
 
   depends_on xcode: ["16.0", :build]
 
   def install
+    # Write the formula version so the SwiftPM build plugin can pick it up
+    # (since the Homebrew tarball has no git history for `git describe`)
+    File.write(".version", version)
+
     # SwiftPM plugins + Homebrew sandboxing can conflict on some systems.
     # Disable SwiftPM sandbox to ensure the manifest and build steps can run.
     system "swift", "build", "-c", "release", "--disable-sandbox"
