@@ -1,8 +1,8 @@
 class Post < Formula
   desc "Local mail daemon, MCP server, and CLI — built in Swift"
   homepage "https://github.com/Cocoanetics/Post"
-  url "https://github.com/Cocoanetics/Post/archive/refs/tags/v1.3.2.tar.gz"
-  sha256 "5619ea79d6dfa85631cab39d71d57668b03d7a8ca2803911c6055d3895e0509a"
+  url "https://github.com/Cocoanetics/Post/archive/refs/tags/v1.4.0.tar.gz"
+  sha256 "9e31350bf795678992b8b0e46069f19ce6b96a1bca23160d47ee980cdabeb502"
   license "MIT"
 
   depends_on xcode: ["16.0", :build]
