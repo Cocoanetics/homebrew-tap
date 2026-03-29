@@ -2,7 +2,7 @@ class Swiftbutler < Formula
   desc "Swift source analysis, syntax checking, reindentation, and file distribution"
   homepage "https://github.com/Cocoanetics/SwiftButler"
   url "https://github.com/Cocoanetics/SwiftButler/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "bf160aa128bfee50df28b6c2e3162cd737f0090f9187c77f3dac0934e526cdee"
+  sha256 "9758486c3c42f588e502be37803d6fa55d9c523fd5b2a38b2081a573b71fbaca"
   license "MIT"
 
   on_macos do
