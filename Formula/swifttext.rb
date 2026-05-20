@@ -1,8 +1,8 @@
 class Swifttext < Formula
   desc "Swiss-army knife for text extraction and document conversion — built in Swift"
   homepage "https://github.com/Cocoanetics/SwiftText"
-  url "https://github.com/Cocoanetics/SwiftText/archive/refs/tags/1.1.8.tar.gz"
-  sha256 "93e006e014919b1d0b71e9d71a1c8171c33edf079e76dd6d460407a31fc08f7b"
+  url "https://github.com/Cocoanetics/SwiftText/archive/refs/tags/1.1.9.tar.gz"
+  sha256 "1d8a3c2ba5490f5befdc06f11ad609a095e76b6d27ea030db05eaefba7ce5d10"
   license "MIT"
 
   depends_on xcode: ["16.0", :build]
