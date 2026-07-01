@@ -1,16 +1,18 @@
 class Swifttext < Formula
   desc "Swiss-army knife for text extraction and document conversion — built in Swift"
   homepage "https://github.com/Cocoanetics/SwiftText"
-  url "https://github.com/Cocoanetics/SwiftText/archive/refs/tags/1.1.9.tar.gz"
-  sha256 "1d8a3c2ba5490f5befdc06f11ad609a095e76b6d27ea030db05eaefba7ce5d10"
+  url "https://github.com/Cocoanetics/SwiftText/archive/refs/tags/2.0.0.tar.gz"
+  sha256 "531d9b97c16c524a0adac5b881765563a64c4ac4a1b4973129fde20bbfd749f1"
   license "MIT"
 
-  depends_on xcode: ["16.0", :build]
+  # SwiftTextOCR builds against the macOS 26 Vision document-recognition APIs
+  # (RecognizeDocumentsRequest), so the macOS 26 SDK (Xcode 26 or newer) is required.
+  depends_on xcode: ["26.0", :build]
   depends_on :macos
 
   def install
     # Write the formula version so the SwiftPM build plugin can pick it up
-    # (since the Homebrew tarball has no git history for `git describe`)
+    # (the Homebrew tarball has no git history for `git describe`).
     File.write(".version", version)
 
     system "swift", "build", "-c", "release", "--disable-sandbox", "--enable-all-traits"
@@ -18,6 +20,6 @@ class Swifttext < Formula
   end
 
   test do
-    assert_match "swifttext", shell_output("#{bin}/swifttext --help")
+    assert_match version.to_s, shell_output("#{bin}/swifttext --version")
   end
 end
