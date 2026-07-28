@@ -1,11 +1,12 @@
 class Post < Formula
   desc "Local mail daemon, MCP server, and CLI — built in Swift"
   homepage "https://github.com/Cocoanetics/Post"
-  url "https://github.com/Cocoanetics/Post/archive/refs/tags/v1.6.8.tar.gz"
-  sha256 "7509a9c7d59be622a8eb796053632fcc69146f8fa8cae6cdd7a810bebb7e8158"
+  url "https://github.com/Cocoanetics/Post/archive/refs/tags/v1.7.0.tar.gz"
+  sha256 "66f56ea64b6dd819ec974d188b8f1b6895d410dad2b6eb69cfb84ef75b5eab46"
   license "MIT"
 
-  depends_on xcode: ["16.0", :build]
+  # Package.swift declares swift-tools-version 6.2, which ships in Xcode 26.0.
+  depends_on xcode: ["26.0", :build]
 
   def install
     # Write the formula version so the SwiftPM build plugin can pick it up
