@@ -1,8 +1,8 @@
 class Swifttext < Formula
   desc "Swiss-army knife for text extraction and document conversion — built in Swift"
   homepage "https://github.com/Cocoanetics/SwiftText"
-  url "https://github.com/Cocoanetics/SwiftText/archive/refs/tags/2.0.0.tar.gz"
-  sha256 "531d9b97c16c524a0adac5b881765563a64c4ac4a1b4973129fde20bbfd749f1"
+  url "https://github.com/Cocoanetics/SwiftText/archive/refs/tags/2.1.0.tar.gz"
+  sha256 "280e773e23c94c79f0986180b014fdac388dc4edc41a4ca5bac2908153263930"
   license "MIT"
 
   # SwiftTextOCR builds against the macOS 26 Vision document-recognition APIs
