@@ -1,13 +1,14 @@
 class Swifttext < Formula
   desc "Swiss-army knife for text extraction and document conversion — built in Swift"
   homepage "https://github.com/Cocoanetics/SwiftText"
-  url "https://github.com/Cocoanetics/SwiftText/archive/refs/tags/2.2.0.tar.gz"
-  sha256 "943209f932544d40d1ccd17dd108a09eab454571a1aa791e691787e3de7c8c88"
+  url "https://github.com/Cocoanetics/SwiftText/archive/refs/tags/2.3.0.tar.gz"
+  sha256 "514e68e3b57e1a598d73496b3dafc74c49c0bb075b0db82ed1243c2d417b2707"
   license "MIT"
 
-  # SwiftTextOCR builds against the macOS 26 Vision document-recognition APIs
-  # (RecognizeDocumentsRequest), so the macOS 26 SDK (Xcode 26 or newer) is required.
-  depends_on xcode: ["26.0", :build]
+  # Package.swift declares swift-tools-version 6.3, which first ships in
+  # Xcode 26.4. (SwiftTextOCR also needs the macOS 26 SDK's Vision
+  # document-recognition APIs, which 26.4 includes.)
+  depends_on xcode: ["26.4", :build]
   depends_on :macos
 
   def install
