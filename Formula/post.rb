@@ -25,13 +25,15 @@ class Post < Formula
 
   def caveats
     <<~EOS
-      Post requires server credentials before use:
+      Post requires server credentials before use. Store them in the Keychain
+      (you will be prompted for the password):
 
-         post keychain add <server-id> --host <host> --port 993
+         post credential set --server <server-id> --host <host> --port 993 --username <user>
          postd start
 
-      No config file needed — servers are auto-discovered from the keychain.
-      For advanced settings, create ~/.post.json (see GitHub for details).
+      Without ~/.post.json, servers are discovered from the Keychain. If you
+      have ~/.post.json, add the server id there first (e.g. "<server-id>": {})
+      before running `post credential set`. See GitHub for advanced settings.
     EOS
   end
 
