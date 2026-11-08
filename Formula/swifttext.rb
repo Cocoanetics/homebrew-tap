@@ -1,8 +1,8 @@
 class Swifttext < Formula
   desc "Swiss-army knife for text extraction and document conversion — built in Swift"
   homepage "https://github.com/Cocoanetics/SwiftText"
-  url "https://github.com/Cocoanetics/SwiftText/archive/refs/tags/2.3.0.tar.gz"
-  sha256 "514e68e3b57e1a598d73496b3dafc74c49c0bb075b0db82ed1243c2d417b2707"
+  url "https://github.com/Cocoanetics/SwiftText/archive/refs/tags/2.6.0.tar.gz"
+  sha256 "adf7e2537706f132b3d966c2f1375fc365945eca3c2e097d2cc3bf8f345535b6"
   license "MIT"
 
   # Package.swift declares swift-tools-version 6.3, which first ships in
