@@ -5,9 +5,9 @@ class Post < Formula
   sha256 "4512f00e44f872e1e4afecc570ff3ccaaaf6a290c1af894669027a95772d80fb"
   license "MIT"
 
-  # Package.swift declares swift-tools-version 6.3, which first ships in
-  # Xcode 26.4 (SwiftText 2.2+ requires it).
-  depends_on xcode: ["26.4", :build]
+  # Package.swift declares swift-tools-version 6.4, which first ships in
+  # Xcode 27.0.
+  depends_on xcode: ["27.0", :build]
   # SwiftMail 1.16 pins a swift-nio-imap revision that declares macOS 15.
   depends_on macos: :sequoia
 
