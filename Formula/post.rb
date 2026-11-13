@@ -1,8 +1,8 @@
 class Post < Formula
   desc "Local mail daemon, MCP server, and CLI — built in Swift"
   homepage "https://github.com/Cocoanetics/Post"
-  url "https://github.com/Cocoanetics/Post/archive/refs/tags/v1.10.1.tar.gz"
-  sha256 "280eb18e49622959913e84c99d9befa523d4f5e55a07ba0de75bb234dd910bce"
+  url "https://github.com/Cocoanetics/Post/archive/refs/tags/v1.11.0.tar.gz"
+  sha256 "4512f00e44f872e1e4afecc570ff3ccaaaf6a290c1af894669027a95772d80fb"
   license "MIT"
 
   # Package.swift declares swift-tools-version 6.3, which first ships in
